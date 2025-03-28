@@ -1,11 +1,11 @@
 body {
     font-size: 16px;
     min-height: 100vh;
-    background-color: #8157a0;
+    background-color: #d0afe7;
     font-family: system-ui, sans-serif;
   }
 
 h1 {
     text-align: center;
-    color: rgb(78, 17, 78);
+    color: rgb(76, 7, 76);
 }

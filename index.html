@@ -3,9 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/app.js" defer></script>
 </head>
+
 <body>
-    
+    <header> 
+        <h1>Number Guessing Game</h1>
+    </header>
+    <main> 
+        <!-- first section for instruction-->
+        <section id= "first" >
+            <div id="header" >
+                <h2>Guess.. Play.. and Enjoy! </h2>
+            </div>
+            <div id="Instructions" >
+                <h3>Game Instructions:</h3>
+                <p> -Guess a Number Between 1 to 30. <br>
+                    -Enter Your Guess. <br>
+                    -You Have Only 5 Attempts. <br>
+                    -If Your Guess is Correct, You Win! <br>
+                    -Good Luck! <br>
+                </p>
+            </div>
+        </section>
+
+        <!-- Playing section-->
+        <section>
+            <h4> Guess a Number from 1 - 30 ! </h4>
+            <input type="number" placeholder="Enter your guess..."/>
+            <button id="guess">Guess</button>
+        </section>
+
+        <!-- Messaging Section-->  
+            <p id="messagee" ></p>
+            <p>  You did: 
+                <span id="numAttempt">0</span> ttempts.
+            </p>
+
+            <p> Attempts Left: 
+                <span id="remainingAttempts">5</span></p>
+
+            <button id="restart" class="hidden">Play Again</button>
+            
+         
+    </main>
 </body>
 </html>
