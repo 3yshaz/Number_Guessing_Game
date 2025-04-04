@@ -1,10 +1,10 @@
 /*-------------- Constants -------------*/
 const guessSubmit = document.getElementById("guess");
-const guessInput = document.getElementById("number");
+const guessInput = document.getElementById("guessing");
 const messageElm = document.getElementById("messagee");
-const attemptsElm = document.getElementById("numAttempt");
-const remainingAttmps = document.getAnimations("remainingAttempts");
-
+const attemptsElm = document.getElementById("Attempts");
+const remainingAttmps = document.getElementById("remainingAttempts");
+const restartGame = document.getElementById("restart");
 
 /*---------- Variables (state) ---------*/
 let randomNumber = Math.floor(Math.random()*30) +1;
@@ -34,23 +34,49 @@ attemptsDisplay.textContent = attempts;
 remainingAttmDis.textContent = remAttempts;
 
 if ( theGuess === randomNumber) {
-    message.textContent = `Congrats you won!! 🎉, the number was ${randomNumber} !`;
+    message.textContent = `Congrats you won!! 🎉, the number is ${randomNumber} !`;
     message.style.color = "Purple";
     disableInput();
+    
+} else if ( remAttempts === 0) {
+    message.textContent = `GAME OVER!😢 you lose! the correct number was ${randomNumber} !`;
+    message.style.color = "red";
+    disableInput();
 } else if ( theGuess < randomNumber){
-    message.textContent = "Ummmm.. number is too low, thimk again!";
-    message.style.color = "orange";
-} else if ( theGuess > randomNumber) {
-    message.textContent= "Ummmm.. number is too high, thimk again!";
+    message.textContent = "Number is too low 🫠, think again!";
+    message.style.color = "yellow";
+} else  {
+    message.textContent= "Number is too high🤔, think again!";
     message.style.color = "orange";
 
-} else if ( remAttempts === 0) {
-    message.textContent = `Oh 😢 you loose! the correct number was ${randomNumber} !`;
-    message.style.color = "yellow";
-    disableInput();
+} 
 }
+
+             /*------- Restart the game ---------*/
+
+function restart() {
+    randomNumber = Math.floor(Math.random() * 30) + 1;
+    attempts = 0;
+    remAttempts = maximumAttempts;
+    attemptsElm.textContent = attempts;
+    remainingAttmps.textContent = remAttempts;
+    guessInput.value = "";
+    messageElm.textContent = "";
+    enableInput();
+}
+            /*------- Disable ---------*/
+function disableInput() {
+    guessInput.disabled = true;
+    guessSubmit.disabled = true;
+}
+
+             /*------- Enable ---------*/
+function enableInput() {
+    guessInput.disabled = false;
+    guessSubmit.disabled = false;
 }
 
 /*----------- Event Listeners ----------*/
 
 guessSubmit.addEventListener('click', guessBtn);
+restartGame.addEventListener('click', restart);

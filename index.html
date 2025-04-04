@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guessing Game</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/app.js" defer></script>
+    <script src="./app.js" defer></script>
 </head>
 
 <body>
@@ -16,15 +16,15 @@
         <!-- first section for instruction-->
         <section id= "first" >
             <div id="header" >
-                <h2>Guess.. Play.. and Enjoy! </h2>
+                <h2>Guess🤓.. Play🥳.. and Enjoy🤩! </h2>
             </div>
             <div id="Instructions" >
                 <h3>Game Instructions:</h3>
-                <p> -Guess a Number Between 1 to 30. <br>
-                    -Enter Your Guess. <br>
-                    -You Have Only 5 Attempts. <br>
-                    -If Your Guess is Correct, You Win! <br>
-                    -Good Luck! <br>
+                <p> -Guess a number between 1 and 30. <br>
+                    -Enter your guess. <br>
+                    -You have 5 attempts. <br>
+                    -If you guess correctly, YOU WIN! <br>
+                    -After 5 attempts you lose!, GOOD LUCK! <br>
                 </p>
             </div>
         </section>
@@ -32,18 +32,19 @@
         <!-- Playing section-->
         <section>
             <h4> Guess a Number from 1 - 30 ! </h4>
-            <input type="number" placeholder="Enter your guess..."/>
+            <input type="number" id="guessing" placeholder="Enter your guess..."/>
             <button id="guess">Guess</button>
         </section>
 
         <!-- Messaging Section-->  
             <p id="messagee" ></p>
             <p>  You did: 
-                <span id="numAttempt">0</span> ttempts.
+                <span id="Attempts">0</span> attempts.
             </p>
 
             <p> Attempts Left: 
-                <span id="remainingAttempts">5</span></p>
+                <span id="remainingAttempts">5</span>
+            </p>
 
             <button id="restart" class="hidden">Play Again</button>
             
