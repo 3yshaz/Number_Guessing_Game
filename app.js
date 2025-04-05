@@ -44,7 +44,7 @@ if ( theGuess === randomNumber) {
     disableInput();
 } else if ( theGuess < randomNumber){
     message.textContent = "Number is too low 🫠, think again!";
-    message.style.color = "yellow";
+    message.style.color = "green";
 } else  {
     message.textContent= "Number is too high🤔, think again!";
     message.style.color = "orange";
