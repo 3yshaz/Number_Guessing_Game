@@ -34,7 +34,7 @@ attemptsDisplay.textContent = attempts;
 remainingAttmDis.textContent = remAttempts;
 
 if ( theGuess === randomNumber) {
-    message.textContent = `Congrats you won!! 🎉, the number is ${randomNumber} !`;
+    message.textContent = `Congrats you win!! 🎉, the number is ${randomNumber} !`;
     message.style.color = "Purple";
     disableInput();
     
