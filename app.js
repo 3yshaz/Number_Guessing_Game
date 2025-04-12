@@ -36,11 +36,17 @@ remainingAttmDis.textContent = remAttempts;
 if ( theGuess === randomNumber) {
     message.textContent = `Congrats you win!! 🎉, the number is ${randomNumber} !`;
     message.style.color = "Purple";
+    message.style.animation = "sparkleWin 4s ease-out";
+    const winSound = new Audio('./sounds/270402__littlerobotsoundfactory__jingle_win_00.wav');
+winSound.play();
     disableInput();
     
 } else if ( remAttempts === 0) {
     message.textContent = `GAME OVER!😢 you lose! the correct number was ${randomNumber} !`;
     message.style.color = "red";
+    message.style.animation = "zoomBig 4s ease-out";
+    const loseSound = new Audio('./sounds/796863__jw_audio__synth-hit-44.wav');
+loseSound.play();
     disableInput();
 } else if ( theGuess < randomNumber){
     message.textContent = "Number is low 🫠, think again!";

@@ -1,7 +1,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #c2a7d4;
+  background-image: url('../images/IMG_1858.jpg');
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +14,19 @@ body {
 
 header {
   text-align: center;
+  text-decoration:underline;
+  color: green;
   margin-bottom: 20px;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #fff; }
+  50% { text-shadow: 0 0 20px #4d1d5d; }
+  100% { text-shadow: 0 0 5px #fff; }
+}
+
+header {
+  animation: glow 1s infinite ease-in-out;
 }
 
 h1 {
@@ -24,6 +37,15 @@ h2 {
   color: #4e2f6b;
 }
 
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+h2 {
+  animation: bounce 4s infinite ease;
+}
 main {
   background: rgb(255, 255, 255);
   padding: 20px;
@@ -36,7 +58,6 @@ main {
   max-width: 400px;
   width: 90%;
 }
-
 
 #first {
   text-align: center;
@@ -91,6 +112,39 @@ button:hover {
   font-weight: bold;
   color: #333;
   margin-top: 15px;
+}
+@keyframes zoomBig {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkleWin {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    color: green;
+    text-shadow: none;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 1;
+    color: limegreen;
+    text-shadow: 0 0 10px limegreen, 0 0 20px green;
+  }
+  100% {
+    transform: scale(1);
+    color: green;
+    text-shadow: 0 0 5px limegreen;
+  }
 }
 
 p {
