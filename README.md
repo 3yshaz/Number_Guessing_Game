@@ -1,5 +1,5 @@
 
-![Screenshot 2025-04-07 at 7 37 57 pm](https://github.com/user-attachments/assets/52f689d7-8ed0-4de2-96e4-489838955fbe)
+![Screenshot 2025-04-12 at 1 08 49 pm](https://github.com/user-attachments/assets/e99539d3-258c-4364-884c-eef5a47bbc0e)
 
 Game: Number Guessing Game.
 A number guessing game is a simple game where the player tries to guess a secret number chosen by the computer within a certain range, like 1 to 30.
